@@ -8,8 +8,12 @@ function App() {
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
 
-  const homeTouchDown = e => {
+  const homeTouchDown = () => {
     setHomeScore(homeScore + 7);
+  };
+
+  const homeFieldGoal = () => {
+    setHomeScore(homeScore + 3);
   };
 
   return (
@@ -37,7 +41,9 @@ function App() {
           <button onClick={homeTouchDown} className="homeButtons__touchdown">
             Home Touchdown
           </button>
-          <button className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button onClick={homeFieldGoal} className="homeButtons__fieldGoal">
+            Home Field Goal
+          </button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown">Away Touchdown</button>
