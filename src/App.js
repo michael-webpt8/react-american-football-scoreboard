@@ -54,8 +54,12 @@ function App() {
           </button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button onClick={awayTouchDown} className="awayButtons__touchdown">
+            Away Touchdown
+          </button>
+          <button onClick={awayFieldGoal} className="awayButtons__fieldGoal">
+            Away Field Goal
+          </button>
         </div>
       </section>
     </div>
